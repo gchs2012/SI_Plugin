@@ -355,12 +355,15 @@ macro GetReturnValue(szLine)
         if (ret != 0xffffffff)
         {
             mid = strmid(szLine, strlen(tag), iLen)
-
-            tag = toupper("void")
-            ret = strncmp(toupper(mid), tag, strlen(tag))
-            if (ret != 0xffffffff)
+            ret = strrchr(mid, "*")
+            if (ret == 0xffffffff)
             {
-                return "无"
+                tag = toupper("void")
+                ret = strncmp(toupper(mid), tag, strlen(tag))
+                if (ret != 0xffffffff)
+                {
+                    return "无"
+                }
             }
 
             return mid
@@ -371,22 +374,29 @@ macro GetReturnValue(szLine)
         if (ret != 0xffffffff)
         {
             mid = strmid(szLine, strlen(tag), iLen)
-
-            tag = toupper("void")
-            ret = strncmp(toupper(mid), tag, strlen(tag))
-            if (ret != 0xffffffff)
+            ret = strrchr(mid, "*")
+            if (ret == 0xffffffff)
             {
-                return "无"
+                tag = toupper("void")
+                ret = strncmp(toupper(mid), tag, strlen(tag))
+                if (ret != 0xffffffff)
+                {
+                    return "无"
+                }
             }
 
             return mid
         }
 
-        tag = toupper("void ")
-        ret = strncmp(toupper(szLine), tag, strlen(tag))
-        if (ret != 0xffffffff)
+        ret = strrchr(szLine, "*")
+        if (ret == 0xffffffff)
         {
-            return "无"
+            tag = toupper("void ")
+            ret = strncmp(toupper(szLine), tag, strlen(tag))
+            if (ret != 0xffffffff)
+            {
+                return "无"
+            }
         }
     }
 
