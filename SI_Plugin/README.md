@@ -10,45 +10,39 @@
 ```
 
 ***常用命令如下：<br>***
-|11|11|
-|:---|:---|
-|a|b|
 
 |命令|描述|
 |:---|:---|
 |config|配置语言环境，0 - 中文，1 - 英文|
-
-```
 |file|生成文件头说明|
 |hd|生成C语言头文件|
-|hdn    |生成不要文件名的新头文件|
-|func   |生成函数头|
-|do     |生成do - while循环|
-|while  |生成while循环|
-|if     |生成if语句|
-|ef     |生成else if分支|
-|ife    |生成if - else|
-|ifs    |生成if - else if - else|
-|switch |生成switch - case|
-|#ifdef |生成#ifdef - #endif|
+|hdn|生成不要文件名的新头文件|
+|func|生成函数头|
+|do|生成do - while循环|
+|while|生成while循环|
+|if|生成if语句|
+|ef|生成else if分支|
+|ife|生成if - else|
+|ifs|生成if - else if - else|
+|switch|生成switch - case|
+|#ifdef|生成#ifdef - #endif|
 |#ifndef|生成#ifndef - #endif|
-|#if    |生成#if - #endif|
-|case   |生成case|
-|struct |生成结构体|
-|enum   |生成枚举结构|
-|hi     |生成修改历史记录|
-|abg    |生成添加代码记录|
-|dbg    |生成删除代码记录|
-|mbg    |生成修改代码记录|
-|ab     |生成添加记录开始|
-|ae     |生成添加记录结束|
-|db     |生成删除记录开始|
-|de     |生成删除记录结束|
-|mb     |生成修改记录开始|
-|me     |生成修改记录结束|
-|pn     |添加问题单号，如果输入‘#’，则单号为空|
-|name   |修改用户名|
-```
+|#if|生成#if - #endif|
+|case|生成case|
+|struct|生成结构体|
+|enum|生成枚举结构|
+|hi|生成修改历史记录|
+|abg|生成添加代码记录|
+|dbg|生成删除代码记录|
+|mbg|生成修改代码记录|
+|ab|生成添加记录开始|
+|ae|生成添加记录结束|
+|db|生成删除记录开始|
+|de|生成删除记录结束|
+|mb|生成修改记录开始|
+|me|生成修改记录结束|
+|pn|添加问题单号，如果输入‘#’，则单号为空|
+|name|修改用户名|
 
 ## 二、source insight 4.0 使用方法如下
 ```
