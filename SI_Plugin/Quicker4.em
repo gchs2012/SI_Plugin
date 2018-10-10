@@ -366,34 +366,34 @@ macro GetReturnValue(szLine)
         return mid
     }
 
-	tag = toupper("static ")
-	ret = strncmp(toupper(szLine), tag, strlen(tag))
-	if (ret != 0xffffffff)
-	{
-		mid = strmid(szLine, strlen(tag), iLen)
-		ret = strrchr(mid, "*")
-		if (ret == 0xffffffff)
-		{
-			tag = toupper("void")
-			ret = strncmp(toupper(mid), tag, strlen(tag))
-			if (ret != 0xffffffff)
-			{
-				return "无"
-			}
-		}
-		return mid
-	}
+    tag = toupper("static ")
+    ret = strncmp(toupper(szLine), tag, strlen(tag))
+    if (ret != 0xffffffff)
+    {
+        mid = strmid(szLine, strlen(tag), iLen)
+        ret = strrchr(mid, "*")
+        if (ret == 0xffffffff)
+        {
+            tag = toupper("void")
+            ret = strncmp(toupper(mid), tag, strlen(tag))
+            if (ret != 0xffffffff)
+            {
+                return "无"
+            }
+        }
+        return mid
+    }
 
-	ret = strrchr(szLine, "*")
-	if (ret == 0xffffffff)
-	{
-		tag = toupper("void")
-		ret = strncmp(toupper(szLine), tag, strlen(tag))
-		if (ret != 0xffffffff)
-		{
-			return "无"
-		}
-	}
+    ret = strrchr(szLine, "*")
+    if (ret == 0xffffffff)
+    {
+        tag = toupper("void")
+        ret = strncmp(toupper(szLine), tag, strlen(tag))
+        if (ret != 0xffffffff)
+        {
+            return "无"
+        }
+    }
 
     return szLine    
 }
@@ -1072,21 +1072,21 @@ macro InsertFuncHeaderCN(hbuf, ln, szFunc, szMyName, newFunc)
             }
             else if (symbol.Type == "Member Function")
             {
-				index = strrchr(szTemp, " ")
-				if (index != 0xffffffff)
-				{
-					szRet = strmid(szTemp, 0, index)
-					ret = strrchr(szRet, "*")
-					if (ret == 0xffffffff)
-					{
-						tag = toupper("void")
-						ret = strncmp(toupper(szRet), tag, strlen(tag))
-						if (ret != 0xffffffff)
-						{
-							szRet = "无"
-						}
-					}
-				}
+                index = strrchr(szTemp, " ")
+                if (index != 0xffffffff)
+                {
+                    szRet = strmid(szTemp, 0, index)
+                    ret = strrchr(szRet, "*")
+                    if (ret == 0xffffffff)
+                    {
+                        tag = toupper("void")
+                        ret = strncmp(toupper(szRet), tag, strlen(tag))
+                        if (ret != 0xffffffff)
+                        {
+                            szRet = "无"
+                        }
+                    }
+                }
             }
             else
             {
