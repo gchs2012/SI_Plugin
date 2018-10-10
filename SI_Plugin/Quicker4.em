@@ -348,23 +348,23 @@ macro GetReturnValue(szLine)
 {
     iLen = strlen(szLine)
 
-	tag = toupper("extern \"C\" ")
-	ret = strncmp(toupper(szLine), tag, strlen(tag))
-	if (ret != 0xffffffff)
-	{
-		mid = strmid(szLine, strlen(tag), iLen)
-		ret = strrchr(mid, "*")
-		if (ret == 0xffffffff)
-		{
-			tag = toupper("void")
-			ret = strncmp(toupper(mid), tag, strlen(tag))
-			if (ret != 0xffffffff)
-			{
-				return "无"
-			}
-		}
-		return mid
-	}
+    tag = toupper("extern \"C\" ")
+    ret = strncmp(toupper(szLine), tag, strlen(tag))
+    if (ret != 0xffffffff)
+    {
+        mid = strmid(szLine, strlen(tag), iLen)
+        ret = strrchr(mid, "*")
+        if (ret == 0xffffffff)
+        {
+            tag = toupper("void")
+            ret = strncmp(toupper(mid), tag, strlen(tag))
+            if (ret != 0xffffffff)
+            {
+                return "无"
+            }
+        }
+        return mid
+    }
 
 	tag = toupper("static ")
 	ret = strncmp(toupper(szLine), tag, strlen(tag))
