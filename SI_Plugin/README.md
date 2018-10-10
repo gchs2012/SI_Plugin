@@ -9,20 +9,25 @@
 4、如输入：co后，按 ctrl + enter 就能显示信息。
 ```
 
-***常用命令<br>***
-```
-***常用命令***
+***命令如下<br>
 |命令|描述|
 |:---|:---|
 |config|配置语言环境，0 - 中文，1 - 英文|
-|file|生成文件头说明|
-```
+|file  |生成文件头说明|
+|hd    |生成C语言头文件|
+|hdn   |生成不要文件名的新头文件|
+|func  |生成函数头|
+|do    |生成do - while循环|
+|while |生成while循环|
+|if    |生成if语句|
+|ef    |生成else if分支|
+|ife   |生成if - else|
+|ifs   |生成if - else if - else|
+|switch|生成switch - case|
+|||
+***
+
 常用命令：
-1、config 或 co 			配置语言环境，0 - 中文，1 - 英文
-2、file 或 fi				生成文件头说明
-3、hd						生成C语言头文件
-4、hdn						生成不要文件名的新头文件
-5、func 或 fu				生成函数头
 6、/*						生成行注释
 7、｛						生成一对括号 { }
 8、do						生成do - while循环
