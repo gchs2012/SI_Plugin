@@ -1,10 +1,13 @@
+# SI_Plugin
 
-一、source insight 3.5 使用方法如下
+## 一、source insight 3.5 使用方法如下
+```
 添加步骤：
 1、将 Quicker3.em 文件放到 source insight 的 base 工程中，默认路径为：C:\Users\root\Documents\Source Insight\Projects\Base
 2、在 Options-》Key Assignments -》Command: Macro: AutoExpand 添加快捷键: ctrl + enter；
 3、保存此设置;
 4、如输入：co后，按 ctrl + enter 就能显示信息。
+```
 
 常用命令：
 1、config 或 co 			配置语言环境，0 - 中文，1 - 英文
