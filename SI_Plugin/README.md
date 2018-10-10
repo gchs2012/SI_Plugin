@@ -47,12 +47,14 @@
 36、name					修改用户名
 
 
-二、source insight 4.0 使用方法如下
+## 二、source insight 4.0 使用方法如下
+```
 添加步骤：
 1、将 Quicker4.em 文件放到 source insight 的 base 工程中，默认路径为：C:\Users\root\Documents\Source Insight 4.0\Projects\Base
 2、在 Options-》Key Assignments -》Command: Macro: AutoExpand 添加快捷键: ctrl + enter
 3、保存此设置
 4、如输入：config后，按 ctrl + enter 就能显示信息
+```
 
 常用命令：
 1、config  			        配置语言环境，0 - 中文，1 - 英文，如果输入‘#’，则语言为中文
