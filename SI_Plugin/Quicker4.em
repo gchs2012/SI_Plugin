@@ -1061,7 +1061,6 @@ macro InsertFuncHeaderCN(hbuf, ln, szFunc, szMyName, newFunc)
             /* 取出返回值定义 */
             szTemp = strmid(szLine, 0, iBegin)
             szTemp = TrimString(szTemp)
-            szRet = GetReturnValue(szTemp)
             if (symbol.Type == "Function")
             {
                 szRet = GetReturnValue(szTemp)
