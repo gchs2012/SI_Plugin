@@ -1062,17 +1062,21 @@ macro InsertFuncHeaderCN(hbuf, ln, szFunc, szMyName, newFunc)
             szTemp = strmid(szLine, 0, iBegin)
             szTemp = TrimString(szTemp)
             szRet = GetReturnValue(szTemp)
-            if (symbol.Type == "Member Function")
+            if (symbol.Type == "Function")
             {
-                ret = strstr(szRet, "::")
-                if (ret != 0xffffffff)
+                szRet = GetReturnValue(szTemp)
+            }
+            else if (symbol.Type == "Member Function")
+            {
+                index = strrchr(szRet, " ")
+                if (index != 0xffffffff)
                 {
-                    index = strrchr(szRet, " ")
-                    if (index != 0xffffffff)
-                    {
-                        szRet = strmid(szRet, 0, index)
-                    }
+                    szRet = strmid(szRet, 0, index)
                 }
+            }
+            else
+            {
+                szRet = ""
             }
 
             /* 从函数头分离出函数参数 */
