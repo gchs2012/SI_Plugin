@@ -344,6 +344,22 @@ macro GetFunctionDef(hbuf, symbol)
     return szFunc
 }
 
+macro IsVoidType(szLine)
+{
+    ret = strrchr(szLine, "*")
+    if (ret == 0xffffffff)
+    {
+        tag = toupper("void")
+        ret = strncmp(toupper(szLine), tag, strlen(tag))
+        if (ret != 0xffffffff)
+        {
+            return "无"
+        }
+    }
+
+    return szLine
+}
+
 macro GetReturnValue(szLine)
 {
     iLen = strlen(szLine)
@@ -355,18 +371,7 @@ macro GetReturnValue(szLine)
         if (ret != 0xffffffff)
         {
             mid = strmid(szLine, strlen(tag), iLen)
-            ret = strrchr(mid, "*")
-            if (ret == 0xffffffff)
-            {
-                tag = toupper("void")
-                ret = strncmp(toupper(mid), tag, strlen(tag))
-                if (ret != 0xffffffff)
-                {
-                    return "无"
-                }
-            }
-
-            return mid
+            return IsVoidType(mid)
         }
 
         tag = toupper("static ")
@@ -374,30 +379,10 @@ macro GetReturnValue(szLine)
         if (ret != 0xffffffff)
         {
             mid = strmid(szLine, strlen(tag), iLen)
-            ret = strrchr(mid, "*")
-            if (ret == 0xffffffff)
-            {
-                tag = toupper("void")
-                ret = strncmp(toupper(mid), tag, strlen(tag))
-                if (ret != 0xffffffff)
-                {
-                    return "无"
-                }
-            }
-
-            return mid
+            return IsVoidType(mid)
         }
 
-        ret = strrchr(szLine, "*")
-        if (ret == 0xffffffff)
-        {
-            tag = toupper("void ")
-            ret = strncmp(toupper(szLine), tag, strlen(tag))
-            if (ret != 0xffffffff)
-            {
-                return "无"
-            }
-        }
+        return IsVoidType(szLine)
     }
 
     return szLine    
