@@ -61,7 +61,7 @@ macro AutoExpand()
     /* 自动完成简化命令的匹配显示 */
     wordinfo.szWord = RestoreCommand(hbuf, wordinfo.szWord)
     sel = GetWndSel(hwnd)
-    if (wordinfo.szWord == "config" || wordinfo.szWord == "co")
+    if (wordinfo.szWord == "config")
     {
         /* 配置命令 */
         DelBufLine(hbuf, ln)
